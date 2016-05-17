@@ -11,6 +11,8 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SpringLayout;
 
+import java.util.regex.*;
+
 import controller.Controller;
 
 public class Panel extends JPanel
@@ -182,8 +184,8 @@ public class Panel extends JPanel
 	{
 		String email = emailField.getText();
 		String ePattern = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$";
-		java.util.regex.Pattern p = java.util.regex.Pattern.compile(ePattern);
-		java.util.regex.Matcher m = p.matcher(email);
+		Pattern p = Pattern.compile(ePattern);
+		Matcher m = p.matcher(email);
 		if (m.matches())
 		{
 			return true;
