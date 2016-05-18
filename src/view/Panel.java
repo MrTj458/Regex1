@@ -26,8 +26,6 @@ public class Panel extends JPanel
 	private JTextField emailField;
 
 	private JButton submitButton;
-	
-	private int numberPassed;
 
 	public Panel(Controller baseController)
 	{
@@ -39,7 +37,6 @@ public class Panel extends JPanel
 		phoneNumberField = new JTextField("Phone Number");
 		emailField = new JTextField("Email");
 		submitButton = new JButton("Submit");
-		numberPassed = 0;
 
 		setupPanel();
 		setupLayout();
